@@ -1,5 +1,6 @@
 class Solution {
     public int maxFreqSum(String s) {
+        //storing frequency of each character in s, then if it's vowel then compare it with maxVowelCnt and update if it exceeds current max. Similar for consonent
         int[] freq = new int[26];
         int maxVowelCnt = 0, maxConsonentCnt = 0;
 
