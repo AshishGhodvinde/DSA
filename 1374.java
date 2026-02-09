@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
     public String generateTheString(int n) {
         char[] res = new char[n];
