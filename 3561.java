@@ -16,6 +16,6 @@ class Solution {
         return sb.toString();
     }
     public boolean isRemovable(char a, char b){
-        return (a=='z' && b=='a') || (a=='a' && b=='z' || Math.abs(a-b)==1) ;
+        return (a=='z' && b=='a') || (a=='a' && b=='z') || Math.abs(a-b)==1 ;
     }
 }
