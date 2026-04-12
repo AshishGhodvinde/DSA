@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int mostFrequentEven(int[] nums) {
         int maxFreq = 0;
