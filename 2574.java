@@ -1,21 +1,34 @@
 class Solution {
     public int[] leftRightDifference(int[] nums) {
-        int[] preArr = new int[nums.length];
-        int[] suffArr = new int[nums.length];
+        int n = nums.length;
+        // int[] pre = new int[n];
+        // int[] suf = new int[n];
 
-        preArr[0] = 0;
-        suffArr[nums.length-1] = 0;
+        // pre[0] = 0;
+        // for(int i=1; i<n; i++){
+        //     pre[i] = pre[i-1]+nums[i-1];
+        // }
 
-        for(int i=1; i<nums.length; i++){
-            preArr[i] = preArr[i-1]+nums[i-1];
+        // suf[n-1] = 0;
+        // for(int i=n-2; i>=0; i--){
+        //     suf[i] = suf[i+1]+nums[i+1];
+        // }
+
+        // int[] ans = new int[n];
+        // for(int i=0; i<n; i++){
+        //     ans[i] = Math.abs(pre[i]-suf[i]);
+        // }
+        // return ans;
+
+        int rightSum = 0, leftSum = 0;
+        for(int num : nums) rightSum+=num;
+
+        for(int i=0; i<n; i++){
+            int val = nums[i];
+            rightSum -= val;
+            nums[i] = Math.abs(rightSum-leftSum);
+            leftSum += val;
         }
-        for(int i=nums.length-2; i>=0; i--){
-            suffArr[i] = suffArr[i+1]+nums[i+1];
-        }
-        int[] ans = new int[nums.length];
-        for(int i=0; i<nums.length; i++){
-            ans[i] = Math.abs(preArr[i]-suffArr[i]);
-        }
-        return ans;
+        return nums;
     }
 }
