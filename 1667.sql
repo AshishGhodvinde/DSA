@@ -1,0 +1,8 @@
+# Write your MySQL query statement below
+SELECT user_id, 
+CONCAT(UPPER(SUBSTR(name, 1, 1)), LOWER(SUBSTR(name, 2))) AS name
+FROM Users
+ORDER BY Users.user_id ASC
+
+-- first letter = SUBSTR(name, 1, 1)
+-- remaining letters = SUBSTR(name, 2), also no length required as we are taking remaining string
