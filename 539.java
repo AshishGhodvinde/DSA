@@ -20,5 +20,18 @@ class Solution {
             prev = i;
         }
         return Math.min(ans, 1440-prev+first);
+
+        // List<Integer> l = new ArrayList<>();
+        // for(String str : timePoints){
+        //     l.add(60*Integer.parseInt(str.substring(0, 2)) + Integer.parseInt(str.substring(3, 5)));
+        // }
+        // Collections.sort(l);
+        // int ans = Integer.MAX_VALUE;
+        // for(int i=1; i<l.size(); i++){
+        //     ans = Math.min(ans, l.get(i)-l.get(i-1));
+        // }
+        // int first = l.get(0), last = l.get(l.size()-1);
+
+        // return Math.min(ans, 1440-last+first);
     }
 }
