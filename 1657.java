@@ -1,3 +1,4 @@
+import java.util.*;
 class Solution {
     public boolean closeStrings(String word1, String word2) {
         int[] frq1 = new int[26];
